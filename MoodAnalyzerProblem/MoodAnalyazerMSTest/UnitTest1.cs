@@ -6,11 +6,11 @@ namespace MoodAnalyazerMSTest
     public class UnitTest1
     {
         [TestMethod]
-        public void GivenSadMoodShouldReturnSad()
+        public void GivenAnyMoodShouldReturnHappy()
         {
             //Arrange
-            string expected = "SAD";
-            string message = "I'm in sad mood";
+            string expected = "HAPPY";
+            string message = "I'm in Any mood";
             MoodAnalyser moodAnalyser = new MoodAnalyser(message);
 
             //Act
