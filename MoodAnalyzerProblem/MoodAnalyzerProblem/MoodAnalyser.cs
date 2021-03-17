@@ -7,19 +7,24 @@ namespace MoodAnalyzerProblem
     public class MoodAnalyser
     {
         private readonly string message;
+        
         public MoodAnalyser(string message)
         {
             this.message = message;
         }
+        public MoodAnalyser()
+        {
+
+        }
         /// <summary>
-        /// Parameterised Constructor
+        /// 
         /// </summary>
-        /// <param name="message"></param>
+        /// <returns></returns>
         
         
         public string AnalyaseMood()
         {
-            if (this.message.Contains("sad"))
+            if (this.message.Contains("Sad"))
             {
                 return "SAD";
             }
