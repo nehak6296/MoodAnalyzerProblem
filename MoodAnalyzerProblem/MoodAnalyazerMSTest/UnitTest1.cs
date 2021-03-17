@@ -70,5 +70,20 @@ namespace MoodAnalyazerMSTest
             }
         }
 
+        //TC3.2
+        [TestMethod]
+        public void Given_When_EmptyMood_Then_Throw_MoodAnalysisException_indicating_EmptyMood()
+        {
+            try
+            {
+                string message = "";
+                MoodAnalyser moodAnalyser = new MoodAnalyser(message);
+                string mood = moodAnalyser.AnalyaseMood();
+            }
+            catch (MoodAnalyserCustomException e)
+            {
+                Assert.AreEqual("Mood should not be Empty", e.Message);
+            }
+        }
     }
 }
