@@ -21,11 +21,27 @@ namespace MoodAnalyazerMSTest
         }
 
         [TestMethod]
+        
         public void GivenAnyMoodShouldReturnHappy()
         {
             //Arrange
             string expected = "HAPPY";
             string message = "I'm in Any mood";
+            MoodAnalyser moodAnalyser = new MoodAnalyser(message);
+
+            //Act
+            string mood = moodAnalyser.AnalyaseMood();
+
+            //Assert
+            Assert.AreEqual(expected, mood);
+
+        }
+        [TestMethod]
+        public void GivenNullMoodShouldReturnHappy()
+        {
+            //Arrange
+            string expected = "HAPPY";
+            string message = null ;
             MoodAnalyser moodAnalyser = new MoodAnalyser(message);
 
             //Act
